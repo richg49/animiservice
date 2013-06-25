@@ -1,0 +1,498 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layout"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:layout_marginLeft="20dp"
+    android:orientation="vertical"
+    android:paddingLeft="30dp" >
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/szinteszt_title"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center" >
+
+        <TableLayout
+            android:id="@+id/jelol_sor"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginTop="24dp"
+            android:layout_gravity="top"
+            android:paddingLeft="30dp"
+            android:paddingTop="30dp" >
+
+            <TextView
+                android:id="@+id/jelol_sor0"
+                style="@style/gep_jel_sor"
+                android:tag="0"
+                android:width="10dp" />
+
+            <TextView
+                android:id="@+id/jelol_sor1"
+                style="@style/gep_jel_sor"
+                android:tag="1" />
+
+            <TextView
+                android:id="@+id/jelol_sor2"
+                style="@style/gep_jel_sor"
+                android:tag="2" />
+
+            <TextView
+                android:id="@+id/jelol_sor3"
+                style="@style/gep_jel_sor"
+                android:tag="3" />
+
+            <TextView
+                android:id="@+id/jelol_sor4"
+                style="@style/gep_jel_sor"
+                android:tag="4" />
+
+            <TextView
+                android:id="@+id/jelol_sor5"
+                style="@style/gep_jel_sor"
+                android:tag="5" />
+
+            <TextView
+                android:id="@+id/jelol_sor6"
+                style="@style/gep_jel_sor"
+                android:tag="6" />
+        </TableLayout>
+
+        <TableLayout
+            android:id="@+id/Table00"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="10dp"
+            android:paddingRight="30dp"
+            android:paddingTop="30dp" >
+
+            <TableRow
+                android:id="@+id/jelol_oszlop"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp" >
+
+                <TextView
+                    android:id="@+id/jelol_oszlop0"
+                    style="@style/gep_jel_oszlop"
+                    android:tag="0" />
+
+                <TextView
+                    android:id="@+id/jelol_oszlop1"
+                    style="@style/gep_jel_oszlop"
+                    android:tag="1" />
+
+                <TextView
+                    android:id="@+id/jelol_oszlop2"
+                    style="@style/gep_jel_oszlop"
+                    android:tag="2" />
+
+                <TextView
+                    android:id="@+id/jelol_oszlop3"
+                    style="@style/gep_jel_oszlop"
+                    android:tag="3" />
+
+                <TextView
+                    android:id="@+id/jelol_oszlop4"
+                    style="@style/gep_jel_oszlop"
+                    android:tag="4" />
+
+                <TextView
+                    android:id="@+id/jelol_oszlop5"
+                    style="@style/gep_jel_oszlop"
+                    android:tag="5" />
+
+                <TextView
+                    android:id="@+id/jelol_oszlop6"
+                    style="@style/gep_jel_oszlop"
+                    android:tag="6" />
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/TableRow00"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" >
+
+                <Button
+                    android:id="@+id/Button00"
+                    style="@style/gep_elem_alap" />
+
+                <Button
+                    android:id="@+id/Button01"
+                    style="@style/gep_elem_alap" />
+
+                <Button
+                    android:id="@+id/Button02"
+                    style="@style/gep_elem_alap" />
+
+                <Button
+                    android:id="@+id/Button03"
+                    style="@style/gep_elem_alap" />
+
+                <Button
+                    android:id="@+id/Button04"
+                    style="@style/gep_elem_alap" />
+
+                <Button
+                    android:id="@+id/Button05"
+                    style="@style/gep_elem_alap" />
+
+                <Button
+                    android:id="@+id/Button06"
+                    style="@style/gep_elem_alap" />
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/TableRow01"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" >
+
+                <Button
+                    android:id="@+id/Button10"
+                    style="@style/gep_elem_alap" />
+
+                <Button
+                    android:id="@+id/Button11"
+                    style="@style/gep_elem_alap" />
+
+                <Button
+                    android:id="@+id/Button12"
+                    style="@style/gep_elem_alap" />
+
+                <Button
+                    android:id="@+id/Button13"
+                    style="@style/gep_elem_alap" />
+
+                <Button
+                    android:id="@+id/Button14"
+                    style="@style/gep_elem_alap" />
+
+                <Button
+                    android:id="@+id/Button15"
+                    style="@style/gep_elem_alap" />
+
+                <Button
+                    android:id="@+id/Button16"
+                    style="@style/gep_elem_alap" />
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/TableRow02"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" >
+
+                <Button
+                    android:id="@+id/Button20"
+                    style="@style/gep_elem_alap" />
+
+                <Button
+                    android:id="@+id/Button21"
+                    style="@style/gep_elem_alap" />
+
+                <Button
+                    android:id="@+id/Button22"
+                    style="@style/gep_elem_alap" />
+
+                <Button
+                    android:id="@+id/Button23"
+                    style="@style/gep_elem_alap" />
+
+                <Button
+                    android:id="@+id/Button24"
+                    style="@style/gep_elem_alap" />
+
+                <Button
+                    android:id="@+id/Button25"
+                    style="@style/gep_elem_alap" />
+
+                <Button
+                    android:id="@+id/Button26"
+                    style="@style/gep_elem_alap" />
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/TableRow03"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" >
+
+                <Button
+                    android:id="@+id/Button30"
+                    style="@style/gep_elem_alap" />
+
+                <Button
+                    android:id="@+id/Button31"
+                    style="@style/gep_elem_alap" />
+
+                <Button
+                    android:id="@+id/Button32"
+                    style="@style/gep_elem_alap" />
+
+                <Button
+                    android:id="@+id/Button33"
+                    style="@style/gep_elem_alap" />
+
+                <Button
+                    android:id="@+id/Button34"
+                    style="@style/gep_elem_alap" />
+
+                <Button
+                    android:id="@+id/Button35"
+                    style="@style/gep_elem_alap" />
+
+                <Button
+                    android:id="@+id/Button36"
+                    style="@style/gep_elem_alap" />
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/TableRow04"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" >
+
+                <Button
+                    android:id="@+id/Button40"
+                    style="@style/gep_elem_alap" />
+
+                <Button
+                    android:id="@+id/Button41"
+                    style="@style/gep_elem_alap" />
+
+                <Button
+                    android:id="@+id/Button42"
+                    style="@style/gep_elem_alap" />
+
+                <Button
+                    android:id="@+id/Button43"
+                    style="@style/gep_elem_alap" />
+
+                <Button
+                    android:id="@+id/Button44"
+                    style="@style/gep_elem_alap" />
+
+                <Button
+                    android:id="@+id/Button45"
+                    style="@style/gep_elem_alap" />
+
+                <Button
+                    android:id="@+id/Button46"
+                    style="@style/gep_elem_alap" />
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/tableRow05"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" >
+
+                <Button
+                    android:id="@+id/Button50"
+                    style="@style/gep_elem_alap" />
+
+                <Button
+                    android:id="@+id/Button51"
+                    style="@style/gep_elem_alap" />
+
+                <Button
+                    android:id="@+id/Button52"
+                    style="@style/gep_elem_alap" />
+
+                <Button
+                    android:id="@+id/Button53"
+                    style="@style/gep_elem_alap" />
+
+                <Button
+                    android:id="@+id/Button54"
+                    style="@style/gep_elem_alap" />
+
+                <Button
+                    android:id="@+id/Button55"
+                    style="@style/gep_elem_alap" />
+
+                <Button
+                    android:id="@+id/Button56"
+                    style="@style/gep_elem_alap" />
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/tableRow06"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" >
+
+                <Button
+                    android:id="@+id/Button60"
+                    style="@style/gep_elem_alap" />
+
+                <Button
+                    android:id="@+id/Button61"
+                    style="@style/gep_elem_alap" />
+
+                <Button
+                    android:id="@+id/Button62"
+                    style="@style/gep_elem_alap" />
+
+                <Button
+                    android:id="@+id/Button63"
+                    style="@style/gep_elem_alap" />
+
+                <Button
+                    android:id="@+id/Button64"
+                    style="@style/gep_elem_alap" />
+
+                <Button
+                    android:id="@+id/Button65"
+                    style="@style/gep_elem_alap" />
+
+                <Button
+                    android:id="@+id/Button66"
+                    style="@style/gep_elem_alap" />
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/tableRow07"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" >
+
+                <RadioGroup
+                    android:id="@+id/radioGroup1"
+                    android:layout_span="7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center" 
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/radio_i"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checked="true"
+                        android:text="@string/str_inv" />
+
+                    <RadioButton
+                        android:id="@+id/radio_t"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/str_torol" />
+
+                    <RadioButton
+                        android:id="@+id/radio_sz"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/str_szinez" />
+                </RadioGroup>
+
+            </TableRow>
+        </TableLayout>
+
+        <TableLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center" >
+
+            <Button
+                android:id="@+id/clear_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="30dp"
+                android:onClick="torol_click"
+                android:padding="15dp"
+                android:text="@string/str_clear"
+                android:textAppearance="?android:attr/textAppearanceLarge" />
+
+            <Button
+                android:id="@+id/szinez_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="30dp"
+                android:onClick="mindszinez_click"
+                android:padding="15dp"
+                android:text="@string/str_szinez"
+                android:textAppearance="?android:attr/textAppearanceLarge" />
+
+            <Button
+                android:id="@+id/szin_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="30dp"
+                android:onClick="szinez_click"
+                android:padding="30dp"
+                android:text="@string/str_vszin"
+                android:textAppearance="?android:attr/textAppearanceLarge" />
+        </TableLayout>
+
+        <TableLayout
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:gravity="center" >
+
+            <TextView
+                android:id="@+id/textView1"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:text="@string/str_fenyero"
+                android:textAppearance="?android:attr/textAppearanceLarge" />
+
+            <SeekBar
+                android:id="@+id/fenyero"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:max="4" />
+
+            <TextView
+                android:id="@+id/fenyero_ertek"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textAppearance="?android:attr/textAppearanceLarge" />
+        </TableLayout>
+
+        <TableLayout
+            android:layout_width="350dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="30dp"
+            android:paddingLeft="30dp"
+            android:paddingTop="30dp" >
+
+            <TextView
+                android:id="@+id/textView12"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:text="@string/str_ido"
+                android:textAppearance="?android:attr/textAppearanceLarge" />
+
+            <SeekBar
+                android:id="@+id/ido"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:max="99" />
+
+            <TextView
+                android:id="@+id/ido_ertek"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textAppearance="?android:attr/textAppearanceLarge" />
+        </TableLayout>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/mutasd_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="30dp"
+        android:onClick="mutat_click"
+        android:paddingBottom="10dp"
+        android:paddingLeft="70dp"
+        android:paddingRight="70dp"
+        android:paddingTop="10dp"
+        android:text="@string/str_mutat"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+</LinearLayout>

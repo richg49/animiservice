@@ -1,0 +1,45 @@
+<resources>
+
+    <!--
+        Base application theme, dependent on API level. This theme is replaced
+        by AppBaseTheme from res/values-vXX/styles.xml on newer devices.
+    -->
+    <style name="AppBaseTheme" parent="android:Theme.Light">
+        <!--
+            Theme customizations available in newer API levels can go in
+            res/values-vXX/styles.xml, while customizations related to
+            backward-compatibility can go here.
+        -->
+    </style>
+
+    <!-- Application theme. -->
+    <style name="AppTheme" parent="AppBaseTheme">
+        <!-- All customizations that are NOT specific to a particular API-level can go here. -->
+    </style>
+
+    <style name="gep_elem_alap">
+        <item name="android:layout_width">40dp</item>
+        <item name="android:layout_height">40dp</item>
+        <item name="android:layout_margin">2dp</item>
+        <item name="android:background">@color/gep_elem</item>
+        <item name="android:textColor">@color/gep_elem</item>
+        <item name="android:onClick">gep_elem_click</item>
+    </style>
+
+    <style name="gep_jel_sor">
+        <item name="android:layout_width">40dp</item>
+        <item name="android:layout_height">40dp</item>
+        <item name="android:layout_margin">2dp</item>
+        <item name="android:background">@color/gep_elem</item>
+        <item name="android:textColor">@color/gep_elem</item>
+    </style>
+
+    <style name="gep_jel_oszlop">
+        <item name="android:layout_width">40dp</item>
+        <item name="android:layout_height">10dp</item>
+        <item name="android:layout_margin">2dp</item>
+        <item name="android:background">@color/gep_elem</item>
+        <item name="android:textColor">@color/gep_elem</item>
+    </style>
+
+</resources>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Animi Service</string>
+    <string name="action_settings">Settings</string>
+    <string name="str_szinez">Mind egyforma</string>
+    <string name="str_clear">Törlés</string>
+    <string name="str_vszin">Válassz színt</string>
+    <string name="str_fenyero">Fényerő</string>
+    <string name="str_ido">Idő (másodperc)</string>
+    <string name="str_mutat">Mutasd</string>
+    <string name="str_inv">Inverz</string>
+    <string name="str_torol">Töröl</string>
+    <string name="str_szinez">Szinez</string>
+    <string name="title_activity_device">DeviceActivity</string>
+    <string name="network_fragment_string">Network Fragment View</string>
+    <string name="device_fragment_string">Device Fragment View</string>
+    <string name="szinteszt_title">Szinek tesztelése</string>
+    <string name="img_alt_device">Device Image Attribute</string>
+    <string name="NotSer2net">Nincs kapcsolat az ASZED-el</string>
+       
+    <string name="str_battery_status">Battery Status</string>
+    <string name="str_battery_level">Battery Level</string>
+    <string name="str_temp_status">Temperature</string>
+    <string name="str_charge_status">Charge Status</string>
+    <string name="animiserverIP">Animi szerver IP</string>
+    <string name="animiserverPort">Animi szerver Port</string>
+    <string name="animiserverTimeout">Animi szerver timeout</string>
+	
+</resources>
