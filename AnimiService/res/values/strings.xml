@@ -18,7 +18,6 @@
     <string name="szinteszt_title">Szinek tesztelése</string>
     <string name="img_alt_device">Device Image Attribute</string>
     <string name="NotSer2net">Nincs kapcsolat az ASZED-el</string>
-       
     <string name="str_battery_status">Battery Status</string>
     <string name="str_battery_level">Battery Level</string>
     <string name="str_temp_status">Temperature</string>
@@ -26,5 +25,7 @@
     <string name="animiserverIP">Animi szerver IP</string>
     <string name="animiserverPort">Animi szerver Port</string>
     <string name="animiserverTimeout">Animi szerver timeout</string>
-	
+    <string name="title_activity_proba">ProbaActivity</string>
+    <string name="hello_world">Hello world!</string>
+
 </resources>

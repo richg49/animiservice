@@ -17,7 +17,6 @@ import android.preference.PreferenceManager;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentTabHost;
 import android.view.Menu;
-import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
@@ -77,6 +76,7 @@ public class MainActivity extends FragmentActivity {
 	public boolean onOptionsItemSelected(MenuItem item) {
 		Intent intent = new Intent();
 		intent.setClass(maincontext , SetPreferenceActivity.class);
+//		intent.setClass(maincontext , ProbaActivity.class);
 		startActivityForResult(intent, 0);
 
 		return true;

@@ -142,13 +142,15 @@ public final class R {
     }
     public static final class layout {
         public static final int activity_main=0x7f030000;
-        public static final int ambilwarna_dialog=0x7f030001;
-        public static final int device_view=0x7f030002;
-        public static final int network_view=0x7f030003;
-        public static final int szinteszt_view=0x7f030004;
+        public static final int activity_proba=0x7f030001;
+        public static final int ambilwarna_dialog=0x7f030002;
+        public static final int device_view=0x7f030003;
+        public static final int network_view=0x7f030004;
+        public static final int szinteszt_view=0x7f030005;
     }
     public static final class menu {
         public static final int main=0x7f090000;
+        public static final int proba=0x7f090001;
     }
     public static final class string {
         public static final int NotSer2net=0x7f07000f;
@@ -158,6 +160,7 @@ public final class R {
         public static final int animiserverTimeout=0x7f070016;
         public static final int app_name=0x7f070000;
         public static final int device_fragment_string=0x7f07000c;
+        public static final int hello_world=0x7f070018;
         public static final int img_alt_device=0x7f07000e;
         public static final int network_fragment_string=0x7f07000b;
         public static final int str_battery_level=0x7f070011;
@@ -174,6 +177,7 @@ public final class R {
         public static final int str_vszin=0x7f070004;
         public static final int szinteszt_title=0x7f07000d;
         public static final int title_activity_device=0x7f07000a;
+        public static final int title_activity_proba=0x7f070017;
     }
     public static final class style {
         /** 
@@ -212,5 +216,6 @@ public final class R {
     }
     public static final class xml {
         public static final int animisetup=0x7f040000;
+        public static final int prefproba=0x7f040001;
     }
 }

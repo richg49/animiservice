@@ -26,7 +26,12 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="SetPreferenceActivity"></activity>
+        <activity android:name="hu.promarkvf.animiservice.SetPreferenceActivity" >
+        </activity>
+        <activity
+            android:name="hu.promarkvf.animiservice.ProbaActivity"
+            android:label="@string/title_activity_proba" >
+        </activity>
     </application>
 
 </manifest>

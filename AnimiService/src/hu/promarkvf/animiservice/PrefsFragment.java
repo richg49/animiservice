@@ -11,6 +11,7 @@ public class PrefsFragment extends PreferenceFragment {
 		super.onCreate(savedInstanceState);
 		
 		// Load the preferences from an XML resource
+//        addPreferencesFromResource(R.xml.animisetup);
         addPreferencesFromResource(R.xml.animisetup);
 	}
 

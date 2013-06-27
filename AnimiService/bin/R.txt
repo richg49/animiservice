@@ -115,11 +115,13 @@ int id tableRow07 0x7f0a0053
 int id textView1 0x7f0a005b
 int id textView12 0x7f0a005e
 int layout activity_main 0x7f030000
-int layout ambilwarna_dialog 0x7f030001
-int layout device_view 0x7f030002
-int layout network_view 0x7f030003
-int layout szinteszt_view 0x7f030004
+int layout activity_proba 0x7f030001
+int layout ambilwarna_dialog 0x7f030002
+int layout device_view 0x7f030003
+int layout network_view 0x7f030004
+int layout szinteszt_view 0x7f030005
 int menu main 0x7f090000
+int menu proba 0x7f090001
 int string NotSer2net 0x7f07000f
 int string action_settings 0x7f070001
 int string animiserverIP 0x7f070014
@@ -127,6 +129,7 @@ int string animiserverPort 0x7f070015
 int string animiserverTimeout 0x7f070016
 int string app_name 0x7f070000
 int string device_fragment_string 0x7f07000c
+int string hello_world 0x7f070018
 int string img_alt_device 0x7f07000e
 int string network_fragment_string 0x7f07000b
 int string str_battery_level 0x7f070011
@@ -143,9 +146,11 @@ int string str_torol 0x7f070009
 int string str_vszin 0x7f070004
 int string szinteszt_title 0x7f07000d
 int string title_activity_device 0x7f07000a
+int string title_activity_proba 0x7f070017
 int style AppBaseTheme 0x7f080000
 int style AppTheme 0x7f080001
 int style gep_elem_alap 0x7f080002
 int style gep_jel_oszlop 0x7f080004
 int style gep_jel_sor 0x7f080003
 int xml animisetup 0x7f040000
+int xml prefproba 0x7f040001
