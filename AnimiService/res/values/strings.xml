@@ -9,6 +9,7 @@
     <string name="str_fenyero">Fényerő</string>
     <string name="str_ido">Idő (másodperc)</string>
     <string name="str_mutat">Mutasd</string>
+    <string name="str_stop">Vége</string>
     <string name="str_inv">Inverz</string>
     <string name="str_torol">Töröl</string>
     <string name="str_szinez">Szinez</string>
@@ -26,6 +27,5 @@
     <string name="animiserverPort">Animi szerver Port</string>
     <string name="animiserverTimeout">Animi szerver timeout</string>
     <string name="title_activity_proba">ProbaActivity</string>
-    <string name="hello_world">Hello world!</string>
-
+    <string name="rgb_err">0 - 255</string>
 </resources>

@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/layout"
     android:layout_width="fill_parent"
@@ -21,8 +22,8 @@
             android:id="@+id/jelol_sor"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:layout_marginTop="24dp"
             android:layout_gravity="top"
+            android:layout_marginTop="24dp"
             android:paddingLeft="30dp"
             android:paddingTop="30dp" >
 
@@ -358,11 +359,11 @@
 
                 <RadioGroup
                     android:id="@+id/radioGroup1"
-                    android:layout_span="7"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="center" 
-                    android:orientation="horizontal">
+                    android:layout_gravity="center"
+                    android:layout_span="7"
+                    android:orientation="horizontal" >
 
                     <RadioButton
                         android:id="@+id/radio_i"
@@ -383,7 +384,6 @@
                         android:layout_height="wrap_content"
                         android:text="@string/str_szinez" />
                 </RadioGroup>
-
             </TableRow>
         </TableLayout>
 
@@ -424,75 +424,172 @@
         </TableLayout>
 
         <TableLayout
-            android:layout_width="150dp"
-            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
             android:gravity="center" >
 
-            <TextView
-                android:id="@+id/textView1"
-                android:layout_width="250dp"
-                android:layout_height="wrap_content"
-                android:text="@string/str_fenyero"
-                android:textAppearance="?android:attr/textAppearanceLarge" />
+            <TableRow
+                android:id="@+id/tableRow1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" >
 
-            <SeekBar
-                android:id="@+id/fenyero"
-                android:layout_width="250dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:max="4" />
+                <TableLayout
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:padding="30dp"
+                    android:paddingLeft="30dp"
+                    android:paddingTop="30dp" >
 
-            <TextView
-                android:id="@+id/fenyero_ertek"
-                android:layout_width="250dp"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:textAppearance="?android:attr/textAppearanceLarge" />
-        </TableLayout>
+                    <TextView
+                        android:id="@+id/textView1"
+                        android:layout_width="250dp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/str_fenyero"
+                        android:textAppearance="?android:attr/textAppearanceLarge" />
 
-        <TableLayout
-            android:layout_width="350dp"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:padding="30dp"
-            android:paddingLeft="30dp"
-            android:paddingTop="30dp" >
+                    <SeekBar
+                        android:id="@+id/fenyero"
+                        android:layout_width="250dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:max="4" />
 
-            <TextView
-                android:id="@+id/textView12"
-                android:layout_width="250dp"
-                android:layout_height="wrap_content"
-                android:text="@string/str_ido"
-                android:textAppearance="?android:attr/textAppearanceLarge" />
+                    <TextView
+                        android:id="@+id/fenyero_ertek"
+                        android:layout_width="250dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:textAppearance="?android:attr/textAppearanceLarge" />
+                </TableLayout>
 
-            <SeekBar
-                android:id="@+id/ido"
-                android:layout_width="250dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:max="99" />
+                <TableLayout
+                    android:layout_width="350dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:padding="30dp"
+                    android:paddingLeft="30dp"
+                    android:paddingTop="30dp" >
 
-            <TextView
-                android:id="@+id/ido_ertek"
-                android:layout_width="250dp"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:textAppearance="?android:attr/textAppearanceLarge" />
+                    <TextView
+                        android:id="@+id/textView12"
+                        android:layout_width="250dp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/str_ido"
+                        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+                    <SeekBar
+                        android:id="@+id/ido"
+                        android:layout_width="250dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:max="99" />
+
+                    <TextView
+                        android:id="@+id/ido_ertek"
+                        android:layout_width="250dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:textAppearance="?android:attr/textAppearanceLarge" />
+                </TableLayout>
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/tableRow2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" >
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_span="2"
+                    android:gravity="center" >
+
+                    <TextView
+                        android:id="@+id/textView21"
+                        android:layout_width="20dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:text="R"
+                        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+                    <EditText
+                        android:id="@+id/editText_r"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ems="3"
+                        android:numeric="integer"
+                        android:inputType="number" >
+
+                        <requestFocus />
+                    </EditText>
+
+                    <TextView
+                        android:id="@+id/textView22"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:text="G"
+                        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+                    <EditText
+                        android:id="@+id/editText_g"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ems="3"
+                        android:inputType="number" >
+                    </EditText>
+
+                    <TextView
+                        android:id="@+id/textView23"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:text="B"
+                        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+                    <EditText
+                        android:id="@+id/editText_b"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ems="3"
+                        android:inputType="number" >
+                    </EditText>
+                </LinearLayout>
+            </TableRow>
         </TableLayout>
     </LinearLayout>
 
-    <Button
-        android:id="@+id/mutasd_button"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_margin="30dp"
-        android:onClick="mutat_click"
-        android:paddingBottom="10dp"
-        android:paddingLeft="70dp"
-        android:paddingRight="70dp"
-        android:paddingTop="10dp"
-        android:text="@string/str_mutat"
-        android:textAppearance="?android:attr/textAppearanceLarge" />
+        android:gravity="center" >
+
+        <Button
+            android:id="@+id/mutasd_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="30dp"
+            android:onClick="mutat_click"
+            android:paddingBottom="10dp"
+            android:paddingLeft="70dp"
+            android:paddingRight="70dp"
+            android:paddingTop="10dp"
+            android:text="@string/str_mutat"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+
+        <Button
+            android:id="@+id/button1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="30dp"
+            android:onClick="stop_click"
+            android:paddingBottom="10dp"
+            android:paddingLeft="70dp"
+            android:paddingRight="70dp"
+            android:paddingTop="10dp"
+            android:text="@string/str_stop"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+    </LinearLayout>
 
 </LinearLayout>

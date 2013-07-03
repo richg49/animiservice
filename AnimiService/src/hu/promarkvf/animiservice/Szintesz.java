@@ -1,16 +1,22 @@
 package hu.promarkvf.animiservice;
 
+import android.content.Context;
+import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.RadioGroup;
 import android.widget.SeekBar;
 import android.widget.TableLayout;
+import android.widget.Toast;
 import android.widget.SeekBar.OnSeekBarChangeListener;
 import android.widget.TableRow;
 import android.widget.TextView;
@@ -29,22 +35,29 @@ public class Szintesz extends Fragment {
 
 		MainActivity.mutasd_button = (Button) V.findViewById(R.id.mutasd_button);
 
-		Button szin_button = (Button) V.findViewById(R.id.szin_button);
-		szin_button.setBackgroundColor(MainActivity.kek);
+		MainActivity.szin_button = (Button) V.findViewById(R.id.szin_button);
+		MainActivity.szin_button.setBackgroundColor(MainActivity.kek);
+		MainActivity.matrix_table = (TableLayout) V.findViewById(R.id.Table00);
 
 		value_fenyero = (TextView) V.findViewById(R.id.fenyero_ertek);
-		value_fenyero.setText(" " + 1);
+		value_fenyero.setText(" " + MainActivity.MAXFENYERO);
 		seekbar_fenyero = (SeekBar) V.findViewById(R.id.fenyero);
+		seekbar_fenyero.setMax(MainActivity.MAXFENYERO - 1);
+		seekbar_fenyero.setProgress(MainActivity.MAXFENYERO - 1);
 		seekbar_fenyero.setOnSeekBarChangeListener(new OnSeekBarChangeListener() {
+			@Override
 			public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
 				int f = progress + 1;
 				MainActivity.fenyero = 1.0f / f;
 				value_fenyero.setText(" " + f);
+				MainActivity.szinez(MainActivity.szin_r, MainActivity.szin_g, MainActivity.szin_b, MainActivity.fenyero, 0);
 			}
 
+			@Override
 			public void onStartTrackingTouch(SeekBar seekBar) {
 			}
 
+			@Override
 			public void onStopTrackingTouch(SeekBar seekBar) {
 			}
 		});
@@ -53,15 +66,18 @@ public class Szintesz extends Fragment {
 		value_ido.setText(" " + 1);
 		seekbar_ido = (SeekBar) V.findViewById(R.id.ido);
 		seekbar_ido.setOnSeekBarChangeListener(new OnSeekBarChangeListener() {
+			@Override
 			public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
 				int f = progress + 1;
 				MainActivity.ido = f;
 				value_ido.setText(" " + f);
 			}
 
+			@Override
 			public void onStartTrackingTouch(SeekBar seekBar) {
 			}
 
+			@Override
 			public void onStopTrackingTouch(SeekBar seekBar) {
 			}
 		});
@@ -84,18 +100,27 @@ public class Szintesz extends Fragment {
 			}
 		}
 
+		MainActivity.ed_r = (EditText) V.findViewById(R.id.editText_r);
+		MainActivity.ed_g = (EditText) V.findViewById(R.id.editText_g);
+		MainActivity.ed_b = (EditText) V.findViewById(R.id.editText_b);
+
+		MainActivity.ed_r.setText(String.valueOf(MainActivity.szin_r));
+		MainActivity.ed_r.addTextChangedListener(new tw(MainActivity.ed_r));
+		MainActivity.ed_g.setText(String.valueOf(MainActivity.szin_g));
+		MainActivity.ed_g.addTextChangedListener(new tw(MainActivity.ed_g));
+		MainActivity.ed_b.setText(String.valueOf(MainActivity.szin_b));
+		MainActivity.ed_b.addTextChangedListener(new tw(MainActivity.ed_b));
+
 		return V;
 	}
 
 	OnClickListener jelelol_sor = new OnClickListener() {
-
 		@Override
 		public void onClick(View v) {
-//			System.out.println("Sor: " + v.getTag());
+			// System.out.println("Sor: " + v.getTag());
 			int sor = Integer.valueOf((String) v.getTag()) + 1;
-			TableLayout table = (TableLayout) V.findViewById(R.id.Table00);
-			for ( int i = 0; i < table.getChildCount(); i++ ) {
-				View child1 = table.getChildAt(i);
+			for ( int i = 0; i < MainActivity.matrix_table.getChildCount(); i++ ) {
+				View child1 = MainActivity.matrix_table.getChildAt(i);
 				if ( child1 instanceof TableRow ) {
 					TableRow tablerow = (TableRow) child1;
 					for ( int j = 0; j < tablerow.getChildCount(); j++ ) {
@@ -134,11 +159,10 @@ public class Szintesz extends Fragment {
 
 		@Override
 		public void onClick(View v) {
-//			System.out.println("Oszlop: " + v.getTag());
+			// System.out.println("Oszlop: " + v.getTag());
 			int oszlop = Integer.valueOf((String) v.getTag());
-			TableLayout table = (TableLayout) V.findViewById(R.id.Table00);
-			for ( int i = 0; i < table.getChildCount(); i++ ) {
-				View child1 = table.getChildAt(i);
+			for ( int i = 0; i < MainActivity.matrix_table.getChildCount(); i++ ) {
+				View child1 = MainActivity.matrix_table.getChildAt(i);
 				if ( child1 instanceof TableRow ) {
 					TableRow tablerow = (TableRow) child1;
 					for ( int j = 0; j < tablerow.getChildCount(); j++ ) {
@@ -184,6 +208,55 @@ public class Szintesz extends Fragment {
 		case R.id.radio_t:
 			return ( 3 );
 		}
-		return(0);
+		return ( 0 );
+	}
+
+	private class tw implements TextWatcher {
+		private EditText mEditText;
+
+		public tw(EditText e) {
+			mEditText = e;
+		}
+
+		@Override
+		public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+		}
+
+		@Override
+		public void onTextChanged(CharSequence s, int start, int before, int count) {
+			String value = s.toString();
+			int intv;
+			try {
+				intv = Integer.parseInt(value);
+				if ( intv > 255 ) {
+					mEditText.setError(getString(R.string.rgb_err));
+				}
+				else {
+					switch ( mEditText.getId() ) {
+					case R.id.editText_r:
+						MainActivity.szin_r = intv;
+						break;
+					case R.id.editText_g:
+						MainActivity.szin_g = intv;
+						break;
+					case R.id.editText_b:
+						MainActivity.szin_b = intv;
+						break;
+
+					default:
+						break;
+					}
+					mEditText.setError(null);
+					MainActivity.szinez(MainActivity.szin_r, MainActivity.szin_g, MainActivity.szin_b, MainActivity.fenyero, 1);
+				}
+			}
+			catch ( Exception e ) {
+				Toast.makeText(MainActivity.maincontext, getString(R.string.NotSer2net), Toast.LENGTH_LONG).show();
+			}
+		}
+
+		@Override
+		public void afterTextChanged(Editable s) {
+		}
 	}
 }
